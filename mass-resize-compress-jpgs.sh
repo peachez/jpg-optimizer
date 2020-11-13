@@ -25,9 +25,9 @@
 
 #######################################################################
 
-srcDir="/Users/kevinseiter/Documents/sites/hitt/sites/default/files"
-destDir="/Users/kevinseiter/Downloads/files-reduced" # make sure this dir exists
-maxWidth="1200"
+srcDir="/Users/kevinseiter/Downloads/my-src-images-directory"
+destDir="/Users/kevinseiter/Downloads/my-destination-directory" # make sure this dir exists
+maxWidth="2000"
 
 # Compress and save all jpeg/jpg files found recursively in source directory
 function resizeMeJpg () {
@@ -62,13 +62,13 @@ export escSrcDir="s/$(printf '%s\n' "$srcDir" | sed -e 's/[]\/$*.^[]/\\&/g')\/\.
 
 # Main call of this file. Loops over each jpg file, as defined by its mime type,
 # and calls the resizeMeJpg function above.
-find ~/Documents/sites/hitt/sites/default/files/. -type f -exec sh -c '
+find "$srcDir/". -type f -exec sh -c '
     file --mime-type "$0" | grep -q image/jpeg\$ && resizeMeJpg "$0" "$escSrcDir" "$destDir" "$maxWidth"
 ' {} \;
 
 # echo "=================="
 # Compress and save all png files found recursively in source directory
 # -- Currently this section is not developed as jpg were the only thing needed when this script was built.
-# find ~/Documents/sites/hitt/sites/default/files/. -type f -exec sh -c '
+# find "$srcDir/". -type f -exec sh -c '
 #     file --mime-type "$0" | grep -q image/png\$ && echo "$0\n"
 # ' {} \;
