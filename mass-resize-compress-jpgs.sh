@@ -25,8 +25,8 @@
 
 #######################################################################
 
-srcDir="/Users/kevinseiter/Downloads/my-src-images-directory"
-destDir="/Users/kevinseiter/Downloads/my-destination-directory" # make sure this dir exists
+srcDir="/Users/johndoe/Downloads/missing_files"
+destDir="/Users/johndoe/Downloads/missing_files--resized" # make sure this dir exists
 maxWidth="2000"
 
 # Compress and save all jpeg/jpg files found recursively in source directory
