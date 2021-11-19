@@ -17,7 +17,7 @@
 # >>>> Make sure your destination directory exists before running this file.
 
 # To run this file, open a terminal and run:
-#   ~/Documents/scripts/mass-resize-compress-jpgs.sh > output-file.txt
+#   ~/Documents/scripts/mass-resize-compress-jpgs/mass-resize-compress-jpgs.sh > output-file.txt
 
 # NOTE: The "> output-file.txt" is totally optional. As this file outputs each file
 # converted, you probably dont want to bloat your terminal window with a
@@ -25,8 +25,8 @@
 
 #######################################################################
 
-srcDir="/Users/johndoe/Downloads/missing_files"
-destDir="/Users/johndoe/Downloads/missing_files--resized" # make sure this dir exists
+srcDir="/Users/johndoe/Downloads/original_files"
+destDir="/Users/johndoe/Downloads/original_files--resized" # make sure this dir exists
 maxWidth="2000"
 
 # Compress and save all jpeg/jpg files found recursively in source directory
